@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,40 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>Bulb_On_Off</title>
 </head>
+
 <body>
-    
+
     <div class="posi">
         <button onclick="document.getElementById('off').src='bulb-on.png' ">Turn On light</button>
         <img src="bulb-off.png" alt="" id="off">
         <button onclick="document.getElementById('off').src='bulb-off.png' ">Turn Off light</button>
     </div>
+    <!--
+    <script>
+        const btnon = document.querySelector("#on");
+        const btnoff = document.querySelector("#off");
+        const image = document.querySelector("#image");
+
+        const on = () =>{
+            image.src="bulb-on.png";
+        }
+        const off = () =>{
+            image.src="bulb-off.png";
+        }
+        /*
+        function on()
+        {
+            image.src="bulb-on.png";
+        }
+        function off()
+        {
+            image.src="bulb-off.png"
+        }
+        */
+        btnon.addEventListener('click', on);
+        btnoff.addEventListener('click', off);
+    </script>
+-->
 </body>
+
 </html>
