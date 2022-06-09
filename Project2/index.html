@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <title> Animated Thermometer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(5, 27, 46);
+        }
+        .text{
+            font-size: 6rem;
+            color: white;
+        }
+        .inner{
+            text-align: center;
+            margin-top: 250px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <h1 class="text">I am Thermometer <span id="temp" class="fa"></span></h1>
+        </div>
+    </div>
+    <script>
+        const tempLoad = () =>{
+            let temp = document.querySelector('#temp');
+            temp.innerHTML = "&#xf2cb";
+            temp.style.color ="black";
+
+            setTimeout(() =>{
+                temp.innerHTML ="&#xf2ca";
+                temp.style.color ="#f8b627";
+            }, 1000);
+
+            setTimeout(() =>{
+                temp.innerHTML ="&#xf2c9";
+            }, 2000);
+
+            setTimeout(() =>{
+                temp.innerHTML ="&#xf2c8";
+            }, 3000);
+
+            setTimeout(() =>{
+                temp.innerHTML ="&#xf2c7";
+                temp.style.color ="#d63031";
+            }, 4000);
+        }
+        tempLoad();
+
+        setInterval(tempLoad, 5000);
+
+        /*
+            setInterval(() => {
+                tempLoad();
+            }, 5000);
+        */
+
+    </script>
+</body>
+</html>
