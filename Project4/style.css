@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(10, 18, 63);
+}
+
+.counter-op{
+    text-align: center;
+    transform: translateY(300px);
+    color: antiquewhite;
+    font-size: 25px;
+}
+.counter{
+    text-align: center;
+    font-size: 70px;
+    color: rgb(54, 255, 4);
+}
