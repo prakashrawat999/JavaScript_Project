@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project_3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: cadetblue;
+            display: grid;
+            place-items: center;
+        }
+        #btn{
+            height: 40px;
+            width: 100px;
+            margin-left: 80px;
+            margin-top: 20px;
+            background-color: #ecdd0c;
+            font-size: medium;
+            font-weight: 600;
+            border-radius: 10px;
+            border-style: dashed;
+        }
+        
+        #temp, #temp_diff{
+            margin-top: 20px;
+            margin-left: 25px;
+            height: 40px;
+            width: 90px;
+        }
+        span {
+            font-size: xxx-large;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--onsumbmit retunr false use for avoid auto submitting-->
+    <form id="tempCalc" onsubmit="calculateTemp(); return false">
+
+        <label for="temp">Please enter the temperature you'd like to convert..</label>
+        <br /><input type="number" name="temp" id="temp">
+
+        <select name="temp_diff" id="temp_diff">
+            <option value="cel">*Celsius</option>
+            <option value="fah">*Fahrenheit</option>
+        </select><br />
+
+        <input type="submit" name="temp" id="btn"><br />
+        <span id="resultCont"></span>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
